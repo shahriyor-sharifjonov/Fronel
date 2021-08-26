@@ -12,8 +12,15 @@
     outline: none;
   }
 }
+html{
+  height: 100%;
+}
 body{
   font-family: 'Raleway', sans-serif;
+  height: 100%;
+}
+main{
+  flex: 1 1 auto;
 }
 a{
   text-decoration: none;
@@ -23,4 +30,9 @@ ul{
 }
 img{
   pointer-events: none;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }

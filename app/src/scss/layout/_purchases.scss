@@ -1,0 +1,132 @@
+.purchases{
+  padding-top: 100px;
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+    margin-bottom: 60px;
+    @include media($sm){
+      font-size: 24px;
+      line-height: 120%;
+    }
+  }
+  &__item{
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 19px;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include media(992){
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    @include media($sm){
+      padding: 15px;
+    }
+    &:not(:last-of-type){
+      margin-bottom: 30px;
+    }
+    &:last-of-type{
+      margin-bottom: 80px;
+    }
+    &-img{
+      @include media(992){
+        margin-bottom: 15px;
+      }
+      @include media($sm){
+        display: none;
+      }
+    }
+    &-title{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      max-width: 280px;
+      @include media(1200){
+        font-size: 18px;
+        line-height: 120%;
+        margin-left: 8px;
+        max-width: 220px;
+      }
+      @include media(992){
+        margin-left: 15px;
+        margin-top: 13px;
+      }
+      @include media($sm){
+        margin: 0 0 6px 0;
+      }
+    }
+    &-mail{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      @include media(1200){
+        font-size: 16px;
+        line-height: 120%;
+        margin-left: 8px;
+      }
+      @include media(992){
+        margin-left: 87px;
+      }
+      @include media($md){
+        margin-bottom: 8px;
+      }
+      @include media($sm){
+        margin-left: 0;
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+    &-price{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      @include media(1200){
+        font-size: 18px;
+        line-height: 120%;
+        margin-left: 8px;
+      }
+      @include media($md){
+        margin-left: 87px;
+      }
+      @include media($sm){
+        margin-left: 0;
+      }
+    }
+    &-date{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      @include media(1200){
+        font-size: 18px;
+        line-height: 120%;
+        margin-left: 8px;
+      }
+    }
+  }
+  &__down-i{
+    background: transparent;
+    border: none;
+    margin: 0 auto 200px auto;
+    cursor: pointer;
+    @include media($sm){
+      margin: 0 auto 100px auto;
+    }
+  }
+}
