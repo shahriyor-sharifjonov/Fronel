@@ -1,0 +1,119 @@
+.slider{
+  margin-bottom: 200px;
+  padding: 0 15px;
+  &__inner{
+    max-width: 1200px !important;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 21px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 150px;
+    position: relative;
+    @include media($sm){
+      padding: 0 15px 0 60px;
+    }
+  }
+  &__item{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 120px;
+    @include media(992){
+      align-items: center;
+    }
+    @include media($sm){
+      margin-right: 30px;
+    }
+  }
+  &__img{
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  &__p{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    @include media(992){
+      text-align: center;
+    }
+    @include media($sm){
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+  .slick{
+    &-list{
+      overflow: hidden;
+    }
+    &-track{
+      display: flex;
+    }
+    &-arrow{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0;
+    }
+    &-prev{
+      left: 80px;
+      width: 25px;
+      height: 25px;
+      border: none;
+      cursor: pointer;
+      background: url(../images/left-arrow.svg) 100% 100% / contain no-repeat;
+      @include media($sm){
+        left: 15px;
+      }
+    }
+    &-next{
+      right: 80px;
+      width: 25px;
+      height: 25px;
+      border: none;
+      cursor: pointer;
+      background: url(../images/right-arrow.svg) 100% 100% / contain no-repeat;
+      @include media($sm){
+        right: 15px;
+      }
+    }
+    &-dots{
+      position: absolute;
+      display: flex;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 50px;
+      li{
+        &:not(:last-child){
+          margin-right: 18px;
+          @include media($sm){
+            margin-right: 8px;
+          }
+        }
+        button{
+          font-size: 0;
+          width: 15px;
+          height: 15px;
+          border: 1px solid #000;
+          border-radius: 50%;
+          background: #fff;
+          cursor: pointer;
+          @include media($sm){
+            width: 10px;
+            height: 10px;
+          }
+        }
+        &.slick-active{
+          button{
+            background: #000;
+          }
+        }
+      }
+    }
+  }
+}

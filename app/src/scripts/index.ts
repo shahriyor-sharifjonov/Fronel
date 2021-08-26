@@ -19,3 +19,22 @@ window.onclick = (e: MouseEvent) => {
   )
     menuToggle();
 };
+
+// Slider
+$('.slider_1 ').slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  dots: true,
+  // autoplay: true,
+  // autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow:1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
+});
