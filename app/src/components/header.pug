@@ -1,1 +1,17 @@
-
+mixin header()
+  header.header 
+    .header__nav.container
+      a(href="index.html").header__logo 
+        p.header__logo-head FRONEL
+        p.header__logo-sub Продажа и покупка аккаунтов
+      ul.header__list 
+        li.header__li 
+          a(href="#!").header__link Контакты 
+        li.header__li 
+          a(href="#!").header__link О нас 
+        li.header__li 
+          a(href="#!").header__link Отзывы
+      a(href="#!").header__user
+        img(src="images/user.svg", alt="user").header__user-img
+      button.header__button 
+        span.header__button-line
