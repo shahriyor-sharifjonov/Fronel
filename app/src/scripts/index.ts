@@ -26,8 +26,8 @@ $('.slider_1 ').slick({
   slidesToShow: 2,
   slidesToScroll: 2,
   dots: true,
-  // autoplay: true,
-  // autoplaySpeed: 2000,
+  autoplay: true,
+  autoplaySpeed: 2000,
   responsive: [
     {
       breakpoint: 992,

@@ -1,0 +1,60 @@
+.footer{
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px -1px 50px 0px #00000040;
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media(1200){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+    @include media(1200){
+      margin-bottom: 25px;
+    }
+    @include media($sm){
+      font-size: 24px;
+      line-height: 120%;
+    }
+  }
+  &__list{
+    display: flex;
+    @include media(1200){
+      margin-bottom: 25px;
+    }
+  }
+  &__li{
+    &:not(:last-child){
+      margin-right: 50px;
+    }
+  }
+  &__img{
+    height: 40px;
+    object-fit: contain;
+    @include media($sm){
+      height: 20px;
+    }
+  }
+  &__p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    text-align: center;
+    @include media($sm){
+      font-size: 16px;
+    }
+    a{
+      color: #000;
+      font-weight: 700;
+    }
+  }
+}

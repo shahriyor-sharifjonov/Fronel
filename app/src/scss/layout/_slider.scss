@@ -1,6 +1,9 @@
 .slider{
   margin-bottom: 200px;
   padding: 0 15px;
+  @include media($sm){
+    margin-bottom: 70px;
+  }
   &__inner{
     max-width: 1200px !important;
     background: #FFFFFF;
@@ -103,10 +106,6 @@
           border-radius: 50%;
           background: #fff;
           cursor: pointer;
-          @include media($sm){
-            width: 10px;
-            height: 10px;
-          }
         }
         &.slick-active{
           button{
