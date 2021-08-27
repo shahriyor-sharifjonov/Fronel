@@ -23,15 +23,30 @@
     @include media(992){
       width: 100%;
     }
+    @media (hover: hover){
+      &:hover{
+        .article__item-top__p{
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .article__item-top__abs{
+          opacity: 0;
+          transform: translate(-50%, 200%);
+        }
+      }
+    }
     &-top{
       min-height: 175px;
       background: #077CC6;
       border-radius: 20px 20px 0 0;
       width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 0 15px;
+      overflow: hidden;
+      transform: perspective(0px);
       @include media(400){
         min-height: 125px;
       }
@@ -41,6 +56,12 @@
         line-height: 127.9%;
         text-align: center;
         color: #FFFFFF;
+        user-select: none;
+        transition: 300ms ease;
+        @media (hover: hover){
+          opacity: 0;
+          transform: translateY(-100%);
+        }
         @include media(1200){
           font-size: 18px;
           line-height: 120%;
@@ -50,6 +71,23 @@
         }
         @include media(400){
           font-size: 13px;
+        }
+      }
+      &__abs{
+        display: none;
+        @media (hover: hover){
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 127.9%;
+          text-align: center;
+          color: #FFFFFF;
+          user-select: none;
+          transition: 300ms ease;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
       }
     }
@@ -97,6 +135,7 @@
       font-size: 24px;
       line-height: 28px;
       color: #FFFFFF;
+      transition: 200ms ease;
       @include media($md){
         font-size: 20px;
         padding: 15px 50px;
@@ -104,6 +143,11 @@
       }
       @include media($sm){
         margin-top: 0;
+      }
+      @media (hover: hover){
+        &:hover{
+          box-shadow: none;
+        }
       }
     }
     &-abs{
