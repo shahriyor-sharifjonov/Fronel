@@ -46,6 +46,7 @@
     flex: 1 1 auto;
     max-width: 500px;
     transition: 400ms ease;
+    margin-bottom: 0;
     @include media(992){
       flex-direction: column;
       background: #fff;

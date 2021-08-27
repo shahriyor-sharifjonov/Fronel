@@ -1,0 +1,15 @@
+mixin register()
+  .register#register 
+    .register__body.container   
+      .register__top  
+        button(onclick="login(this)").register__top-btn.active Войти
+        button(onclick="register(this)").register__top-btn Регистрация
+      form(action="#!").register__form.register__login.active
+        input(type="email" placeholder="Эл. Почта").register__form-input
+        input(type="text" placeholder="Пароль").register__form-input
+        button(type="submit").register__form-btn Отправить
+      form(action="#!").register__form.register__registration
+        input(type="email" placeholder="Эл. Почта").register__form-input
+        input(type="text" placeholder="Пароль").register__form-input
+        button(type="submit").register__form-btn Отправить
+    a(href="#!").register__close

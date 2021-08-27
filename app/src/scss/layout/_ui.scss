@@ -24,9 +24,6 @@ main{
 }
 a{
   text-decoration: none;
-  &:hover{
-    color: inherit;
-  }
 }
 ul{
   list-style: none;
@@ -38,4 +35,8 @@ img{
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+button{
+  font-family: inherit;
+  cursor: pointer;
 }

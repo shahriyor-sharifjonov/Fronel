@@ -50,3 +50,27 @@ $(function(){
  });
 
 });
+
+if(document.getElementsByClassName("register__top-btn")){
+  let btn = document.getElementsByClassName("register__top-btn");
+  function register(el){
+    let login = document.getElementsByClassName('register__login');
+    let register = document.getElementsByClassName('register__registration');
+    for(let i = 0; i < btn.length; i++){
+      btn[i].classList.remove('active');
+    }
+    el.classList.add('active');
+    register[0].classList.add('active')
+    login[0].classList.remove('active')
+  }
+  function login(el){
+    let login = document.getElementsByClassName('register__login');
+    let register = document.getElementsByClassName('register__registration');
+    for(let i = 0; i < btn.length; i++){
+      btn[i].classList.remove('active');
+    }
+    el.classList.add('active');
+    login[0].classList.add('active')
+    register[0].classList.remove('active')
+  }
+}
