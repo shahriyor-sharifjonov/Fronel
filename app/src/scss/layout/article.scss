@@ -1,0 +1,139 @@
+.article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: calc(50% - 100px);
+    box-shadow: 0px 0px 50px 0px #00000040;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    @include media(1400){
+      width: calc(50% - 15px);
+    }
+    @include media(992){
+      width: 100%;
+    }
+    &-top{
+      min-height: 175px;
+      background: #077CC6;
+      border-radius: 20px 20px 0 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 15px;
+      @include media(400){
+        min-height: 125px;
+      }
+      &__p{
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 127.9%;
+        text-align: center;
+        color: #FFFFFF;
+        @include media(1200){
+          font-size: 18px;
+          line-height: 120%;
+        }
+        @include media($sm){
+          font-size: 16px;
+        }
+        @include media(400){
+          font-size: 13px;
+        }
+      }
+    }
+    &-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 230px;
+      padding: 0 15px;
+      @include media($md){
+        min-height: 190px;
+      }
+    }
+    &-title{
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 28px;
+      color: #000000;
+      margin-bottom: 10px;
+      text-align: center;
+      @include media($md){
+        font-size: 20px;
+      }
+      @include media($md){
+        font-size: 16px;
+      }
+    }
+    &-price{
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 29px;
+      color: #000000;  
+      span{
+        color: #9F9F9F;
+      }    
+    }
+    &-btn{
+      background: #077CC6;
+      box-shadow: 0px 0px 15px rgba(7, 124, 198, 0.47);
+      border-radius: 20px;
+      padding: 20px 70px;
+      margin-top: 27px;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 28px;
+      color: #FFFFFF;
+      @include media($md){
+        font-size: 20px;
+        padding: 15px 50px;
+        border-radius: 15px;
+      }
+      @include media($sm){
+        margin-top: 0;
+      }
+    }
+    &-abs{
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 23px;
+      color: #FFFFFF;
+      background: #000000;
+      width: 75px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include media(1200){
+        bottom: 15px;
+        left: 15px;
+        border-radius: 10px;
+      }
+      @include media($md){
+        display: none;
+      }
+    }
+  }
+  &__down{
+    background: none;
+    margin: 50px 0 200px 0;
+    border: none;
+    cursor: pointer;
+  }
+}

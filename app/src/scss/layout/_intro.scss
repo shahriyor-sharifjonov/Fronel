@@ -3,6 +3,14 @@
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
   padding: 90px 0;
   margin-bottom: 40px;
+  &_no-shadow-top{
+    box-shadow: 0px 0px 50px 0px #00000033;
+    margin-top: -119px;
+    padding-top: 200px;
+    @include media(992){
+      margin-top: -119px !important;
+    }
+  }
   &:first-of-type{
     @include media(992){
       margin-top: 20px;

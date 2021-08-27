@@ -1,0 +1,69 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="FRONEL WEBSITE")
+    title Purchases | FRONEL
+    link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .wrapper
+      include components/header.pug 
+      +header
+      main.main 
+        include components/intro.pug 
+        +intro1-2
+        .article 
+          .article__body.container 
+            .article__item 
+              .article__item-top 
+                img(src="images/logo-light.webp", alt="").article__item-img
+              .article__item-content 
+                p.article__item-title NordVPN Premium с подпиской до 2022 года
+                p.article__item-price 50 рублей <span>за 1 аккаунт</span>
+                a(href="#purchase").article__item-btn Купить 
+                p.article__item-abs 22 шт
+            .article__item 
+              .article__item-top 
+                p.article__item-top__p Сообщение от продавца: Аккаунт IVI с <br>автоопределением. По истечению срока <br>подписки - она продлевается заново!
+              .article__item-content 
+                p.article__item-title NordVPN Premium с подпиской до 2022 года
+                a(href="#purchase").article__item-btn Купить 
+                p.article__item-abs 20₽
+            .article__item 
+              .article__item-top 
+                p.article__item-top__p Сообщение от продавца: Аккаунт IVI с <br>автоопределением. По истечению срока <br>подписки - она продлевается заново!
+              .article__item-content 
+                p.article__item-title NordVPN Premium с подпиской до 2022 года
+                a(href="#purchase").article__item-btn Купить 
+                p.article__item-abs 20₽
+            .article__item 
+              .article__item-top 
+                p.article__item-top__p Сообщение от продавца: Аккаунт IVI с <br>автоопределением. По истечению срока <br>подписки - она продлевается заново!
+              .article__item-content 
+                p.article__item-title NordVPN Premium с подпиской до 2022 года
+                a(href="#purchase").article__item-btn Купить 
+                p.article__item-abs 20₽
+            .article__item 
+              .article__item-top 
+                p.article__item-top__p Сообщение от продавца: Аккаунт IVI с <br>автоопределением. По истечению срока <br>подписки - она продлевается заново!
+              .article__item-content 
+                p.article__item-title NordVPN Premium с подпиской до 2022 года
+                a(href="#purchase").article__item-btn Купить 
+                p.article__item-abs 20₽
+            .article__item 
+              .article__item-top 
+                p.article__item-top__p Сообщение от продавца: Аккаунт IVI с <br>автоопределением. По истечению срока <br>подписки - она продлевается заново!
+              .article__item-content 
+                p.article__item-title NordVPN Premium с подпиской до 2022 года
+                a(href="#purchase").article__item-btn Купить 
+                p.article__item-abs 20₽
+          button.article__down
+            img(src="images/arrow-down.svg", alt="down arrow").article__down-img
+      include components/footer.pug 
+      +footer
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js") 
+    script(src="scripts/index.js") 
