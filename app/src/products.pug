@@ -7,6 +7,7 @@ html(lang="en")
     meta(name="description", content="FRONEL WEBSITE")
     title Purchases | FRONEL
     link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css")
     link(rel="stylesheet", href="styles/index.css")
   body 
     .wrapper
@@ -69,6 +70,26 @@ html(lang="en")
             img(src="images/arrow-down.svg", alt="down arrow").article__down-img
       include components/footer.pug 
       +footer
+
+      #purchase.popup 
+        .popup__body 
+          p.popup__title Аккаунт IVI до 11.09.2021 (Закончится через 2 недели)
+          form(action="#!").popup__form
+            label(for="email").popup__form-label Email: 
+            input(type="email" id="email" placeholder="Ваш email").popup__form-input 
+            p.popup__form-label Cпособ оплаты:
+            .dropdown
+              button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false") QIWI WALLET, Банковские карты 
+              ul(class="dropdown-menu" aria-labelledby="dropdownMenuButton1")
+                li.dropdown-item QIWI WALLET, Банковские карты 
+                li.dropdown-item QIWI WALLET, Банковские карты 
+                li.dropdown-item QIWI WALLET, Банковские карты 
+            p.popup__p Все аккаунты проверяются на валидность перед выдачей. <br>Наши письма могут попасть в папку спам 
+            .popup__btns 
+              a(href="#!").popup__close.popup__btn Закрыть
+              button(type="submit").popup__submit.popup__btn Купить
+
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") 
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js") 
     script(src="scripts/index.js") 
